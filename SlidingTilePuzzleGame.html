@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style/modifiedStyle.css">
+    <link rel="stylesheet" type="text/css" href="style/modifiedTabs.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="titlePuz">My Puzzle Game</h1>
+    </header>
+    <div class="mainContainer">
+        <div class="tabs">
+            <div class="innerTab">
+                <div class="whiteTop">
+                    <div id="playerInfoTab" style="cursor: pointer" class="tabBtnDef tabBtnClicked">
+                        Player Info
+                    </div>
+                    <div id="gameStatsTab" style="cursor: pointer" class="tabBtnDef tabBtn">
+                        Game Stats
+                    </div>
+                    <div class="gameSetup">
+                        <h3>Game Setup</h3>
+                        <div class="gameSetupBox">
+                            <form class="formBlock">
+                                <h3 class="subTitle">game info/settings</h3>
+                                <label for="pname">Player name </label>
+                                <input type="text" id="pname" name="pname" placeholder="Please enter name"><br>
+                                <label for="plevel">Puzzle Dimension </label>
+                                <select id="plevel" name="plevel">
+                                    <option value="---">---</option>
+                                    <option value="Three">Three</option>
+                                    <option value="Four">Four</option>
+                                    <option value="Five">Five</option>
+                                </select>
+                                <br>
+                                <div id="playButton" disabled class="btnNow greenButton btnNowDisabled">
+                                    <p>Play Now</p>
+                                </div>
+                                <div id="cancelButton" disabled class="btnNow redButton btnNowDisabled">
+                                    <p>Cancel Now</p>
+                                </div>
+                            </form>
+                            <form class="formBlock">
+                                <h3 class="subTitle">game progress</h3>
+                                <label id="lmoves" for="moves">Moves </label>
+                                <label id="lsec" for="Sec">Sec </label>
+                                <label id="lmin" for="Min">Min </label>
+                                <label id="lhours" for="Hours">Hours </label>
+                                <br>
+                                <input type="number" id="moves" name="moves" readonly>
+                                <input type="number" id="sec" name="sec" readonly>
+                                <input type="number" id="min" name="min" readonly>
+                                <input type="number" id="hours" name="hours" readonly>
+
+                                <br>
+                            </form>
+                        </div>
+                    </div>
+                    <div style="display:none" class="gameStats">
+                        <h3>Player stats</h3>
+                        <table id="stats">
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    name
+                                </th>
+                                <th>
+                                    dim
+                                </th>
+                                <th>
+                                    status
+                                </th>
+                                <th>
+                                    moves
+                                </th>
+                                <th>
+                                    dur (s)
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="puzzleBoard">
+            <!--put index in small tag-->
+            <div style="display: none;" class="levelThreeBoard board">
+                <div class="tile" cursor="pointer"> <p>1</p> <small>  </small> </div>
+                <div class="tile" cursor="pointer"> <p>2</p> <small>  </small></div>
+                <div class="tile" cursor="pointer"> <p>3</p> <small>  </small></div>
+                <div class="tile" cursor="pointer"> <p>4</p> <small>  </small></div>
+                <div class="tile empty"> <p>&nbsp;<p> </div>
+                <div class="tile" cursor="pointer"> <p>5</p> <small>  </small></div>
+                <div class="tile" cursor="pointer"> <p>6</p> <small>  </small></div>
+                <div class="tile" cursor="pointer"> <p>7</p> <small>  </small></div>
+                <div class="tile" cursor="pointer"> <p>8</p> <small>  </small></div>
+            </div>
+            <div style="display: none;" class="levelFourBoard board">
+                <div class="tile2" cursor="pointer"> <p>1</p> <small>  </small> </div>
+                <div class="tile2" cursor="pointer"> <p>2</p> <small>  </small></div>
+                <div class="tile2" cursor="pointer"> <p>3</p> <small>  </small></div>
+                <div class="tile2" cursor="pointer"> <p>4</p> <small>  </small></div>
+                <div class="tile2 empty"> <p>&nbsp;<p> </div>
+                <div class="tile2" cursor="pointer"> <p>5</p> <small>  </small></div>
+                <div class="tile2" cursor="pointer"> <p>6</p> <small>  </small></div>
+                <div class="tile2" cursor="pointer"> <p>7</p> <small>  </small></div>
+                <div class="tile2" cursor="pointer"> <p>8</p> <small>  </small></div>
+                <div class="tile2" cursor="pointer"> <p>9</p> <small>  </small></div>
+                <div class="tile2" cursor="pointer"> <p>10</p> <small>  </small></div>
+                <div class="tile2" cursor="pointer"> <p>11</p> <small>  </small></div>
+                <div class="tile2" cursor="pointer"> <p>12</p> <small>  </small></div>
+                <div class="tile2" cursor="pointer"> <p>13</p> <small>  </small></div>
+                <div class="tile2" cursor="pointer"> <p>14</p> <small>  </small></div>
+                <div class="tile2" cursor="pointer"> <p>15</p> <small>  </small></div>
+            </div>
+            <div style="display:none;" class="levelFiveBoard board">
+                <div class="tile3" cursor="pointer"> <p>1</p> <small>  </small> </div>
+                <div class="tile3" cursor="pointer"> <p>2</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>3</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>4</p> <small>  </small></div>
+                <div class="tile3 empty"> <p>&nbsp;<p> </div>
+                <div class="tile3" cursor="pointer"> <p>5</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>6</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>7</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>8</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>9</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>10</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>11</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>12</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>13</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>14</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>15</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>16</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>17</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>18</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>19</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>20</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>21</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>22</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>23</p> <small>  </small></div>
+                <div class="tile3" cursor="pointer"> <p>24</p> <small>  </small></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>
+        copyright © Dennis Khelvaly & Alin Caia
+        </p>
+    </footer>
+</body>
+<script type="text/javascript" src="js/modifiedStyle.js"></script>
+<script type="text/javascript" src="js/modifiedPuzzle.js"></script>
+</html>

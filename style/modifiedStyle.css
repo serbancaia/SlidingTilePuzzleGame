@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: #afd9ec;
+    height:100vh;
+}
+
+header, footer{
+    height:15%;
+    vertical-align: sub;
+    text-align: center;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer p{
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    text-align: center;
+}
+
+#titlePuz{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.textBottom{
+    position: sticky;
+    bottom:0px;
+}
+
+.puzzleBoard{
+    background-color:white;
+    height:100%;
+    width:66.6%;
+    display:inline-block;
+}
+
+.levelThreeBoard{
+    height:100%;
+}
+
+.levelFourBoard{
+    height:100%;
+}
+
+.levelFiveBoard{
+    height:100%;
+}
+
+.tile{
+    display: inline-flex;
+    width: 32%;
+    height: 32%;
+    margin:0.2%;
+    background-color:rgb(119, 179, 237);
+    text-align:center;
+    vertical-align: middle;
+    color:white;
+    font-size: 350%;
+    border:solid;
+    border-color:black;
+    border-width: medium;
+}
+
+.tile p,.tile2 p,.tile3 p {
+    margin:auto;
+}
+
+.tile small,.tile2 small,.tile3 small{
+    bottom:5px;
+    left:5px;
+    font-size:30%;
+    position: sticky;
+}
+
+.tile2{
+    display: inline-flex;
+    width: 24%;
+    height: 24%;
+    margin:0.2%;
+    background-color:rgb(119, 179, 237);
+    text-align:center;
+    vertical-align: middle;
+    color:white;
+    font-size: 350%;
+    border:solid;
+    border-color:black;
+    border-width: medium;
+}
+
+.tile3{
+    display: inline-flex;
+    width: 19%;
+    height: 19%;
+    margin:0.2%;
+    background-color:rgb(119, 179, 237);
+    text-align:center;
+    vertical-align: middle;
+    color:white;
+    font-size: 350%;
+    border:solid;
+    border-color:black;
+    border-width: medium;
+}
+
+.empty{
+    background-color:#afd9ec !important;
+}
+
+.leftSection,.middleSection{
+    border: 2px solid darkcyan;
+    /*use proper styling for spacing, height, floating or positioning,. . .*/
+}
+
+legend{
+    font-size: 1.2em;
+    color: #09384e;
+    font-weight: bold;
+}
+
+label{
+    width: 40%;
+	margin: 1.7%;
+}
+
+input{
+    margin-left:5px;
+}
+
+.greenButton  {
+    background-color:/* green */ #4CAF50;
+}
+
+.blueButton{
+    background-color:/* blue */ #008CBA;
+}
+
+.redButton{
+    background-color:/* Red */  #f44336;
+}
+
+.disabledButton{
+    background-color:/* Gray */ #e7e7e7;
+}
+
+#checkBoardId{
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+.puzzleBoard {
+/* to be assigned to the inner tml of div#checkBoardId*/
+    margin: 1px;
+    border: 3px solid black;
+    padding: 2px;
+ /*use proper styling for positioning, spacing borders, …*/
+}
+
+
+.filledTile, .emptyTile {
+    width: 0px;
+    height: 0px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #77B3ED;
+    border: 2px solid #404c50;
+    color:white;
+    font-weight: bold;
+/*use proper styling for spacing borders,*/
+}
+
+.emptyTile {
+    background-color: #afd9ec;
+    color:  #afd9ec;
+}

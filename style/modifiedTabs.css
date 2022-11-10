@@ -1,0 +1,166 @@
+/*--------------------------*/
+/*****  tabs structure ****/
+/*------ Stats table -------*/
+table.tableSats {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td{
+    /*  use proper styling for td, th */
+  }
+  th{
+    /*  use proper styling for td, th */
+
+  }
+tr:nth-child(XYZ):hover{
+
+}
+
+
+.tabs{
+  background-color: #404c50;
+  float:left;
+  height:100%;
+  width: 33%;
+  display:inline-block;
+}
+
+.subTitle{
+  color: #09384e;
+  margin-top: -12px;
+  background-color: #afd9ec;
+  display: table;
+  margin-left:5px;
+}
+
+label{
+  display:inline-block;
+}
+
+input{
+  display:inline-block;
+}
+
+.innerTab{
+  width:96%;
+  height:95%;
+  margin:auto;
+  background-color:#afd9ec;
+  margin-top:5px;
+  border:solid;
+}
+
+.whiteTop{
+  width:100%;
+  height:10%;
+  background-color:white;
+}
+
+.mainContainer{
+  height:70%;
+  border:solid;
+  border-color: gray;
+}
+
+.tabBtnDef{
+  display: inline-block;
+  height:100%;
+  width: 20%;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameSetup{
+  padding: 15px;
+}
+
+.gameSetupBox{
+  margin:auto;
+  height: 95%;
+  width: 100%;
+  border:solid;
+  padding:10px;
+  padding-top:20px;
+}
+
+.formBlock{
+  height:95%;
+  width:95%;
+  border:solid;
+  border-color:gray;
+  border-width: thin;
+  margin:auto;
+  margin-bottom:20px;
+
+}
+
+#lsec,#lmin,#lhours{
+  width:8%;
+}
+
+#lmoves{
+  width:30%;
+}
+
+#moves{
+  width:16%;
+  margin-right:15%;
+}
+
+#sec,#min,#hours{
+  width:11%;
+  margin-bottom:5%;
+}
+
+.tabBtn{
+  background-color:white;
+}
+.tabBtnClicked{
+  background-color:rgb(223, 223, 223);
+}
+
+.btnNow{
+  display: inline-block;
+  height:6vh;
+  width: 40%;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin:15px;
+  color:white;
+  cursor: pointer;
+}
+
+.btnNowDisabled{
+  cursor: no-drop !important;
+  background-color:white !important;
+  color:black !important;
+}
+#stats {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#stats td, #stats th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#stats th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+#stats tr:nth-child(even){background-color: #f2f2f2;}
+
+.gameStats{
+    padding:15px;
+}
